@@ -40,7 +40,7 @@ class Image
         }
 
         $width = $width ?? $this->defaultWidth;
-        $height = $height ?? $this->defaultHeight;
+        $height = $height ?? $width ?? $this->defaultHeight;
 
         $size = $width === $height ? $width : $width.'x'.$height;
         $size = $size.($format === 'png' ? '' : '.'.$format);
